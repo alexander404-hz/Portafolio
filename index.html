@@ -1,0 +1,757 @@
+<!doctype html>
+<html lang="es-SV">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Portafolio | Alexander Hz.</title>
+
+    <meta
+      name="description"
+      content="Ingeniero en Sistemas Informáticos, Desarrollador Web Full Stack Jr."
+    />
+    <meta
+      name="keywords"
+      content="Portafolio, Desarrollador web Full Stack Jr, El Salvador, Ingeniero en Sistemas Informaticos"
+    />
+
+    <meta name="author" content="Alexander Hz." />
+    <meta name="robots" content="index, follow" />
+
+    <link
+      rel="canonical"
+      href="https://alexander404-san.github.io/Proyecto-CSS/"
+    />
+
+    <!-- Open Graph -->
+    <meta
+      property="og:url"
+      content="https://alexander404-san.github.io/Proyecto-CSS/"
+    />
+    <meta property="og:title" content="Portafolio | Alexander Hernandez" />
+    <meta property="og:site_name" content="Portafolio de Alexander Hernandez" />
+    <meta
+      property="og:description"
+      content="Ingeniero en Sistemas Informáticos, Desarrollador Web Full Stack Jr."
+    />
+    <meta
+      property="og:image"
+      content="https://alexander404-san.github.io/Proyecto-CSS/assets/img/preview.png"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_SV" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Portafolio de Alexander Hernandez" />
+    <meta
+      name="twitter:description"
+      content="Ingeniero en Sistemas Informáticos, Desarrollador Web Full Stack Jr."
+    />
+    <meta
+      name="twitter:image"
+      content="https://alexander404-san.github.io/Proyecto-CSS/assets/img/preview.png"
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" />
+    <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/icons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/icons/favicon-16x16.png"
+    />
+    <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png" />
+    <link rel="manifest" href="site.webmanifest" />
+
+    <!-- Pre Carga -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Google Fonts: diferido -->
+    <link
+      rel="preload"
+      as="style"
+      onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      "
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    />
+
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      />
+    </noscript>
+
+    <!-- diseño general -->
+    <meta name="theme-color" content="#8b5cf6" />
+    <!-- <meta name="color-scheme" content="light dark" /> -->
+    <link rel="stylesheet" href="assets/css/styles.min.css" />
+  </head>
+
+  <body id="top" class="home-page">
+    <!-- Header con navegación -->
+    <header class="header">
+      <div class="container header__container">
+        <div class="header__brand">
+          <h1 class="header__name">Alexander Hz.</h1>
+          <p class="header__tagline">Ing. en Sistemas Informaticos</p>
+        </div>
+
+        <nav class="nav" aria-label="Navegacion principal">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a class="nav__link nav__link--active" href="#inicio">Inicio</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#sobre-mi">Sobre mi</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#proyectos">Proyectos</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#habilidades">Habilidades</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#contacto">Contacto</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Contenido principal -->
+    <main id="main-content" class="main">
+      <div class="container main__container">
+        <!-- Hero -->
+        <section class="hero" id="inicio">
+          <div class="hero__container">
+            <h2 class="hero__title">¡Hola! Soy Alexander Hernandez</h2>
+            <p class="hero__subtitle">
+              Ingeniero en Sistemas Informaticos <br />
+              Desarrollador Web Full Stack Jr.
+            </p>
+            <p class="hero__description">
+              Enfocado en la construcción de aplicaicones web con buen
+              rendimiento. Mi objetivo es transformar diseños complejos en
+              experiencias digitales rápidas, accesibles y optimizadas para el
+              usuario final.
+            </p>
+
+            <div class="hero__actions">
+              <a href="#proyectos" class="button button--primary"
+                >Ver Proyectos</a
+              >
+              <a href="#contacto" class="button button--secondary"
+                >Contáctame</a
+              >
+            </div>
+
+            <ul class="hero__stats">
+              <li class="stat">
+                <span class="stat__number">3+</span>
+                <span class="stat__label"
+                  >Meses <br />
+                  aprendiendo</span
+                >
+              </li>
+              <li class="stat">
+                <span class="stat__number">3+</span>
+                <span class="stat__label"
+                  >Proyectos <br />
+                  completados</span
+                >
+              </li>
+              <li class="stat">
+                <span class="stat__number">3+</span>
+                <span class="stat__label">Tecnologías</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Sobre mi -->
+        <section class="about" id="sobre-mi">
+          <h2 class="about__title">Sobre mí</h2>
+          <div class="about__container">
+            <figure class="about__picture">
+              <img
+                src="assets/img/foto-alexander.webp"
+                alt="Fotografía de medio cuerpo de Alexander Hernandez vistiendo formal."
+                width="165"
+                height="212"
+                decoding="async"
+                fetchpriority="high"
+              />
+              <figcaption>Alexander Hernandez - Desarrollador Web</figcaption>
+            </figure>
+
+            <p class="about__intro">
+              Egresado de la Universidad de El Salvador, con enfoque en la
+              solución de problemas mediante el uso de herramientas digitales
+              como la inteligencia artificial para optimizar y apoyar tareas
+              técnicas y operativas.
+            </p>
+
+            <p class="about__text">
+              Poseo conocimientos en el Ciclo de Vida del Desarrollo de Software
+              (SDLC) como análisis, diseño, gestión, desarrollo, despliegue,
+              pruebas y documentación de sistemas informáticos. Mis principales
+              intereses son: Análisis de sistemas, Desarrollo Web, DevOps, Cloud
+              Computing.
+            </p>
+
+            <div class="resume">
+              <p class="resume__title">Para conocer mi trayectoria completa:</p>
+
+              <div class="resume__list">
+                <a
+                  href="assets/docs/curriculum-vitae-alexander-hernandez.pdf"
+                  target="_blank"
+                  rel="noopener"
+                  class="resume__link"
+                >
+                  <strong>📄 Ver Currículum (PDF)</strong>
+                </a>
+
+                <a
+                  href="assets/docs/curriculum-vitae-alexander-hernandez.pdf"
+                  download="CV_Alexander_Hernandez.pdf"
+                  class="resume__link"
+                >
+                  <strong>📥 Descargar currículum (PDF)</strong>
+                </a>
+              </div>
+            </div>
+
+            <blockquote class="quote">
+              <p class="quote__text">
+                "Estamos entrando en la Era de la Inteligencia... donde la
+                infraestructura del conocimiento humano se vuelve
+                exponencialmente más poderosa."
+              </p>
+              <cite class="quote__author">— Sam Altman, CEO de OpenAI</cite>
+            </blockquote>
+
+            <div class="values">
+              <h3 class="values__title">Valores</h3>
+              <ul class="values__list">
+                <li class="values__item">
+                  <div class="values__icon">🚀</div>
+                  <strong>Adaptabilidad</strong>
+                  <span
+                    >Capacidad autodidacta para integrar tecnologías
+                    emergentes</span
+                  >
+                </li>
+                <li class="values__item">
+                  <div class="values__icon">🎯</div>
+                  <strong>Ética Profesional</strong>
+                  <span
+                    >Compromiso integral con la calidad y responsabilidad
+                    técnica en cada proyecto</span
+                  >
+                </li>
+                <li class="values__item">
+                  <div class="values__icon">🤝</div>
+                  <strong>Sinergia</strong>
+                  <span
+                    >Liderazgo colaborativo y comunicación efectiva para el
+                    éxito del equipo</span
+                  >
+                </li>
+                <li class="values__item">
+                  <div class="values__icon">📈</div>
+                  <strong>Optimización</strong>
+                  <span>Perseverancia en la mejora constante de procesos</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- Proyectos -->
+        <section class="projects u-card-border" id="proyectos">
+          <div class="projects__container">
+            <h2 class="projects__title">Proyectos</h2>
+
+            <p class="projects__intro">
+              A continuación se presentan algunos proyectos desarrollados como
+              parte de mi aprendizaje en desarrollo web, enfocados en la
+              aplicación de buenas prácticas, optimización y estructura
+              semántica.
+            </p>
+
+            <div class="projects__grid">
+              <!-- Proyecto 1 -->
+              <article class="project project--featured">
+                <header class="project__header">
+                  <span class="project__badge">Destacado</span>
+
+                  <h3 class="project__title">
+                    Landing Page - Contabilidad Florez
+                  </h3>
+                </header>
+
+                <figure class="project__picture">
+                  <a href="proyectos/contabilidad/index.html">
+                    <img
+                      src="assets/img/proyectos/contabilidad.jpg"
+                      alt="Captura de pantalla de la landing page de Contabilidad Florez"
+                      width="425"
+                      height="253"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </a>
+                  <figcaption>Servicios de contabilidad</figcaption>
+                </figure>
+
+                <p class="project__description">
+                  Landing page desarrollada para presentar servicios contables,
+                  enfocada en la jerarquía visual del contenido y la navegación
+                  intuitiva para mejorar la comprensión del usuario.
+                </p>
+
+                <h4 class="project__subtitle">Lo que aprendí:</h4>
+
+                <ul class="project__learnings">
+                  <li>Estructuración semántica del contenido</li>
+                  <li>Uso adecuado de encabezados y secciones</li>
+                  <li>
+                    organización de la información orientada a la conversión y
+                    experiencia del usuario
+                  </li>
+                </ul>
+
+                <ul class="project__technologies">
+                  <li class="tag">HTML5</li>
+                  <li class="tag">CSS3</li>
+                </ul>
+
+                <footer class="project__links">
+                  <a
+                    class="project__link"
+                    href="proyectos/contabilidad/index.html"
+                    >Ver proyecto</a
+                  >
+                  <a
+                    target="_blank"
+                    rel="me noopener noreferrer"
+                    title="Ver codigo en GitHub"
+                    aria-label="Codigo del proyecto"
+                    href="https://github.com/Alexander404-san/Proyecto-CSS/tree/main"
+                    class="project__link"
+                    >Ver código</a
+                  >
+                </footer>
+              </article>
+
+              <!-- Proyecto 2 -->
+              <article class="project">
+                <header class="project__header">
+                  <h3 class="project__title">
+                    Formulario de registro con Validaciones HTML
+                  </h3>
+                </header>
+
+                <figure class="project__picture">
+                  <a href="proyectos/formulario.html">
+                    <img
+                      src="assets/img/proyectos/formulario.jpg"
+                      alt="Formulario web con múltiples campos y validaciones"
+                      width="625"
+                      height="253"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </a>
+                  <figcaption>
+                    Formulario con distintos tipos de entrada y validaciones
+                  </figcaption>
+                </figure>
+
+                <p class="project__description">
+                  Formulario web orientado a la recopilación estructurada de
+                  datos, implementando validaciones nativas de HTML para
+                  garantizar la integridad de la información sin depender de
+                  JavaScript.
+                  <br /><br />
+                  A nivel de estilos, se trabajó en la consistencia visual de
+                  los campos, estados de interacción y organización del layout,
+                  priorizando claridad, accesibilidad y una experiencia de
+                  usuario fluida.
+                </p>
+
+                <h4 class="project__subtitle">Lo que aprendí:</h4>
+
+                <ul class="project__learnings">
+                  <li>
+                    Implementación de validaciones nativas como
+                    <code>required</code>, <code>pattern</code>,
+                    <code>min</code> y <code>max</code>, aprovechando el
+                    comportamiento del navegador.
+                  </li>
+                  <li>
+                    Uso de <code>fieldset</code> y <code>legend</code> para
+                    estructurar formularios de forma semántica y accesible.
+                  </li>
+                  <li>
+                    Estilización de formularios manteniendo consistencia entre
+                    inputs, selects y botones, incluyendo estados como
+                    <code>:focus</code> y
+                    <code>:valid</code>/<code>:invalid</code>.
+                  </li>
+                </ul>
+
+                <ul class="project__technologies">
+                  <li class="tag">HTML5</li>
+                  <li class="tag">CSS3</li>
+                </ul>
+
+                <footer class="project__links">
+                  <a class="project__link" href="proyectos/formulario.html"
+                    >Ver proyecto</a
+                  >
+                  <a
+                    target="_blank"
+                    rel="me noopener noreferrer"
+                    title="Ver codigo en GitHub"
+                    aria-label="Codigo del proyecto"
+                    href="https://github.com/Alexander404-san/Proyecto-CSS/tree/main"
+                    class="project__link"
+                    >Ver código</a
+                  >
+                </footer>
+              </article>
+
+              <!-- Proyecto 3 -->
+              <article class="project">
+                <header class="project__header">
+                  <h3 class="project__title">
+                    Contenido Multimedia y Responsive
+                  </h3>
+                </header>
+
+                <figure class="project__picture">
+                  <a href="proyectos/multimedia.html">
+                    <img
+                      src="assets/img/proyectos/multimedia.jpg"
+                      alt="Ejemplo de imágenes responsivas y contenido multimedia"
+                      width="425"
+                      height="248"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </a>
+                  <figcaption>
+                    Uso de imágenes adaptativas y elementos multimedia
+                  </figcaption>
+                </figure>
+
+                <p class="project__description">
+                  Implementación de contenido multimedia optimizado para la web,
+                  incluyendo imágenes responsivas, uso del elemento
+                  <code>picture</code> para art direction y carga eficiente de
+                  recursos como video y audio. <br /><br />
+                  Desde el enfoque de CSS, se trabajó en la adaptación visual
+                  del contenido a distintos dispositivos, asegurando layouts
+                  flexibles y una correcta integración de elementos multimedia
+                  dentro del diseño.
+                </p>
+
+                <h4 class="project__subtitle">Lo que aprendí:</h4>
+
+                <ul class="project__learnings">
+                  <li>
+                    Uso de <code>srcset</code> y <code>sizes</code> para servir
+                    imágenes adaptadas según el dispositivo.
+                  </li>
+                  <li>
+                    Implementación del elemento <code>picture</code> para
+                    control de versiones de imagen (art direction).
+                  </li>
+                  <li>
+                    Aplicación de técnicas responsive con CSS para adaptar
+                    imágenes y contenedores multimedia sin romper el layout.
+                  </li>
+                </ul>
+
+                <ul class="project__technologies">
+                  <li class="tag">HTML5</li>
+                  <li class="tag">CSS3</li>
+                </ul>
+
+                <footer class="project__links">
+                  <a class="project__link" href="proyectos/multimedia.html">
+                    Ver proyecto
+                  </a>
+                  <a
+                    target="_blank"
+                    rel="me noopener noreferrer"
+                    title="Ver codigo en GitHub"
+                    aria-label="Codigo del proyecto"
+                    href="https://github.com/Alexander404-san/Proyecto-CSS/tree/main"
+                    class="project__link"
+                    >Ver código</a
+                  >
+                </footer>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="skills" id="habilidades">
+          <h2 class="skills__title">Habilidades</h2>
+
+          <div class="skills__container">
+            <h3 class="skills__subtitle">Tecnologías aprendidas</h3>
+
+            <ul class="skills__list">
+              <li class="skill">
+                <h4 class="skill__name" id="skill-html">HTML - Avanzado</h4>
+                <div class="skill__bar">
+                  <div class="skill__progress skill__progress--html"></div>
+                </div>
+                <span class="skill__description">
+                  Maquetación semántica avanzada, optimización de recursos
+                  multimedia, arquitectura de formularios y estándares de
+                  accesibilidad web (A11y).
+                </span>
+              </li>
+
+              <li class="skill">
+                <h4 class="skill__name" id="skill-css">CSS - Avanzado</h4>
+                <div class="skill__bar">
+                  <div class="skill__progress skill__progress--css"></div>
+                </div>
+                <span class="skill__description"
+                  >Arquitectura modular BEM, Metodología Mobile First, Layouts
+                  fluidos con unidades relativas, Animaciones con transiciones,
+                  Diseño Responsivo, Optimización de Core Web Vitals.</span
+                >
+              </li>
+
+              <li class="skill">
+                <h4 class="skill__name" id="skill-js">JS - Basico</h4>
+                <div class="skill__bar">
+                  <div class="skill__progress skill__progress--js"></div>
+                </div>
+                <span class="skill__description"
+                  >Conocimiento general del lenguaje</span
+                >
+              </li>
+
+              <li class="skill">
+                <h4 class="skill__name" id="skill-seo">
+                  SEO técnico - Intermedio
+                </h4>
+                <div class="skill__bar">
+                  <div class="skill__progress skill__progress--seo"></div>
+                </div>
+                <span class="skill__description">
+                  Optimización semántica, configuración de Meta-tags, gestión de
+                  indexación y posicionamiento orgánico.
+                </span>
+              </li>
+            </ul>
+            <div class="learning u-card-border">
+              <h3 class="learning__title">Actualmente aprendiendo:</h3>
+              <ul class="learning__list">
+                <li class="learning__item">Java Script (JS)</li>
+                <li class="learning__item">Fundamementos JS</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- Contacto -->
+        <section class="contact u-card-border" id="contacto">
+          <div class="contact__container">
+            <h2 class="contact__title">¿Te gustaría conectar?</h2>
+            <p class="contact__description">
+              Siempre estoy buscando aprender de otros desarrolladores,
+              compartir experiencias y tal vez colaborar en proyectos
+              interesantes.
+            </p>
+
+            <ul class="contact__methods">
+              <li class="contact__method">
+                <a
+                  href="https://github.com/Alexander404-san"
+                  class="contact__link"
+                >
+                  <h3 class="contact__method-title">💻 GitHub</h3>
+
+                  <span>@Alexander404</span>
+                </a>
+              </li>
+
+              <li class="contact__method">
+                <a
+                  href="mailto:alexander404.san@gmail.com"
+                  class="contact__link"
+                >
+                  <h3 class="contact__method-title">📧 Email</h3>
+
+                  <span>alexander404.san@gmail.com</span>
+                </a>
+              </li>
+
+              <li class="contact__method">
+                <a
+                  href="https://www.linkedin.com/in/alexander404/"
+                  class="contact__link"
+                >
+                  <h3 class="contact__method-title">💼 LinkedIn</h3>
+                  <span>/in/Alexander404</span>
+                </a>
+              </li>
+            </ul>
+
+            <p class="contact__description">
+              Si deseas ponerte en contacto conmigo para oportunidades
+              laborales, proyectos o consultas profesionales, puedes enviarme un
+              mensaje mediante el siguiente formulario.
+            </p>
+
+            <form
+              class="contact__form"
+              action="https://formspree.io/f/mgonrdrz"
+              method="POST"
+            >
+              <fieldset class="contact__fieldset">
+                <legend class="contact__legend">Formulario de contacto</legend>
+
+                <div class="form__inputs">
+                  <div class="form__item">
+                    <label class="form__label" for="nombre">Nombre:</label>
+                    <input
+                      type="text"
+                      id="nombre"
+                      name="nombre"
+                      required
+                      autocomplete="name"
+                      maxlength="30"
+                      pattern="^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ\s]+$"
+                      title="No se permiten números, solo letras"
+                      placeholder="Juanito Pérez"
+                      class="form__input"
+                    />
+                  </div>
+
+                  <div class="form__item">
+                    <label class="form__label" for="email">
+                      Correo electrónico:
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      required
+                      autocomplete="email"
+                      placeholder="ejemplo@dominio.com"
+                      class="form__input"
+                    />
+                  </div>
+                </div>
+
+                <div class="form__item">
+                  <label class="form__label" for="mensaje"> Mensaje: </label>
+                  <textarea
+                    id="mensaje"
+                    name="mensaje"
+                    placeholder="Escribe tu mensaje aquí..."
+                    required
+                    class="form__input form__area"
+                  ></textarea>
+                </div>
+
+                <input
+                  type="hidden"
+                  name="_subject"
+                  value="Nuevo mensaje desde portafolio"
+                  class="form__input"
+                />
+
+                <div class="form__actions">
+                  <button class="button button--primary" type="submit">
+                    Enviar
+                  </button>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+        </section>
+
+        <a href="#top">↑ Volver al inicio</a>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer__container">
+        <nav class="footer__nav">
+          <ul class="footer__list">
+            <li><a href="#inicio" class="footer__link">Inicio</a></li>
+            <li><a href="#sobre-mi" class="footer__link">Sobre mí</a></li>
+            <li><a href="#proyectos" class="footer__link">Proyectos</a></li>
+            <li><a href="#habilidades" class="footer__link">Habilidades</a></li>
+            <li><a href="#contacto" class="footer__link">Contacto</a></li>
+          </ul>
+        </nav>
+
+        <ul class="footer__contact">
+          <li class="footer__networks">
+            <a
+              class="network__link"
+              href="mailto:alexander404@gmail.com?subject=Contacto desde el Portafolio"
+              target="_blank"
+              title="Enviar un correo a mi dirección de email"
+              aria-label="Gmail"
+            >
+              <span class="icon icon-gmail"></span>
+            </a>
+          </li>
+          <li class="footer__networks">
+            <a
+              class="network__link"
+              href="https://www.linkedin.com/in/alexander404/"
+              target="_blank"
+              rel="me noopener noreferrer"
+              title="Visitar mi perfil de LinkedIn"
+              aria-label="LinkedIn"
+            >
+              <span class="icon icon-linkedin"></span>
+            </a>
+          </li>
+          <li class="footer__networks">
+            <a
+              class="network__link"
+              href="https://github.com/Alexander404-san"
+              target="_blank"
+              rel="me noopener noreferrer"
+              title="Visitar mi perfil de GitHub"
+              aria-label="GitHub"
+            >
+              <span class="icon icon-github"></span>
+            </a>
+          </li>
+        </ul>
+
+        <p class="footer__copyright">
+          &copy; 2026 Alexander Hernandez. Todos los derechos reservados.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

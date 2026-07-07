@@ -1,0 +1,128 @@
+.hero {
+  grid-area: hero;
+  position: relative;
+
+  padding: 2.5rem 0;
+
+  text-align: center;
+  color: var(--color-light-100);
+
+  border: 1px solid var(--color-primary-400);
+  box-shadow: 0 0px 20px 20px var(--color-primary-033);
+
+  overflow: hidden;
+}
+
+@media (min-width: 480px) {
+  .hero {
+    border-radius: var(--radius-xl);
+  }
+}
+
+@media (min-width: 768px) {
+  .hero {
+    padding: 3rem 0;
+  }
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: -50%;
+
+  background: var(--gd-hero);
+
+  z-index: -1;
+  animation: gradientShift-transform 10s ease-in-out infinite;
+}
+
+.hero__container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  padding: 0 1rem;
+}
+
+@media (min-width: 768px) {
+  .hero__container {
+    padding: 0 2rem;
+  }
+}
+
+.hero__title {
+  margin: 0 auto;
+  padding: 0.5rem 0;
+
+  font-size: clamp(2.5rem, 11vw, 3.5rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+  text-shadow: 2px 2px 4px var(--color-dark-800);
+  color: var(--color-light-100);
+  -webkit-text-fill-color: var(--color-light-100);
+
+  animation: fadeIn 0.8s ease-out;
+}
+
+.hero__subtitle {
+  margin: 0;
+
+  font-weight: 600;
+  font-size: clamp(1.125rem, 5vw, 1.5rem);
+
+  animation: fadeIn 1s ease-out 0.2s both;
+}
+
+.hero__description {
+  max-width: 700px;
+  margin: 0 auto;
+
+  line-height: 1.8;
+  font-size: clamp(0.92rem, 4vw, 1.125rem);
+
+  animation: fadeIn 1.2s ease-out 0.4s both;
+}
+
+.hero__actions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+
+  animation: fadeIn 1.4s ease-out 0.6s both;
+}
+
+.hero__stats {
+  display: flex;
+  justify-content: center;
+
+  text-align: center;
+
+  animation: fadeIn 1.6s ease-out 0.8s both;
+}
+
+.stat {
+  flex: 1;
+  display: inline-block;
+
+  text-align: center;
+}
+
+.stat:hover .stat__number {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.stat__number {
+  display: block;
+
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: clamp(1.8rem, 8vw, 2rem);
+  font-weight: bold;
+  text-shadow: 1.5px 1.5px 3px var(--color-dark-800);
+}
+
+.stat__label {
+  font-size: clamp(0.675rem, 1vw, 0.875rem);
+  font-weight: 600;
+  text-transform: uppercase;
+}
