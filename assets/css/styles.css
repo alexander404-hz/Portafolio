@@ -2326,6 +2326,7 @@ figure:hover figcaption {
   position: fixed;
   right: 2rem;
   bottom: 2rem;
+  z-index: 99;
 
   display: flex;
 
