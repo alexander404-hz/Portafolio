@@ -2281,7 +2281,7 @@ ul {
 .footer__copyright {
   margin: 0;
 
-  font-size: clamp(0.9rem, 4vw, 1rem);
+  font-size: 0.75rem;
   color: var(--color-light-shadow);
 }
 
