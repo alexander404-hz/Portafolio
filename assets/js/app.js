@@ -109,7 +109,7 @@ function ajustarDistribucion() {
     );
   });
 
-  if (projects.length === 0) return;
+  if (projects.length === 0) return;  
 
   if (window.matchMedia("(min-width: 768px)").matches) {
     if (window.matchMedia("(max-width: 1024px)").matches) {
@@ -117,6 +117,8 @@ function ajustarDistribucion() {
         projects[projects.length - 1].classList.add("project--one-horizontal");
       }
     } else {
+        console.log("xd: ",projects.length%3);
+
       if (projects.length % 3 === 1) {
         projects[projects.length - 1].classList.add("project--horizontal");
       } else if (projects.length % 3 === 2) {
