@@ -279,7 +279,7 @@
         </section>
 
         <!-- Proyectos -->
-        <section class="projects u-card-border" id="proyectos">
+        <section class="projects u-card-border">
           <div class="projects__container">
             <h2 class="projects__title">Proyectos</h2>
 
@@ -292,40 +292,59 @@
 
             <div class="projects__grid">
               <!-- Proyecto 1 -->
+             
+
+              
               <article class="project project--featured">
                 <header class="project__header">
+                  <figure class="project__picture">
+              
+                      <img
+                        src="assets/img/contabilidad.jpg"
+                        alt="Captura de pantalla de la landing page de Contabilidad Florez"
+                        width="425"
+                        height="250"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    <figcaption>Servicios de contabilidad</figcaption>
+                  </figure>
                   <span class="project__badge">Destacado</span>
+                </header>
 
+                <div class="project__body">
                   <h3 class="project__title">
                     Landing Page - Contabilidad Florez
                   </h3>
-                </header>
 
-                <figure class="project__picture">
-                  <a
-                    href="https://alexander404-hz.github.io/Landing-Page-Contabilidad/"
-                  >
-                    <img
-                      src="assets/img/contabilidad.jpg"
-                      alt="Captura de pantalla de la landing page de Contabilidad Florez"
-                      width="425"
-                      height="253"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </a>
-                  <figcaption>Servicios de contabilidad</figcaption>
-                </figure>
+                  <p class="project__resume">
+                    Formulario web orientado a la recopilación estructurada de
+                    datos, implementando validaciones nativas de HTML para
+                    garantizar la integridad de la información sin depender de
+                    JavaScript.
+                    <br /><br />
+                    Formulario web orientado a la recopilación estructurada de
+                    datos, implementando validaciones nativas de HTML para
+                    garantizar la integridad de la información sin depender de
+                    JavaScript. A nivel de estilos, se trabajó en la
+                    consistencia visual de los campos, estados de interacción y
+                    organización del layout, priorizando claridad, accesibilidad
+                    y una experiencia de usuario fluida.
+                  </p>
 
-                <p class="project__description">
-                  Landing page desarrollada para presentar servicios contables,
-                  enfocada en la jerarquía visual del contenido y la navegación
-                  intuitiva para mejorar la comprensión del usuario.
-                </p>
+                  <ul class="project__technologies">
+                    <li class="tag">HTML5</li>
+                    <li class="tag">CSS3</li>
+                    <li class="tag">HTML5</li>
+                    <li class="tag">CSS3</li>
+                    <li class="tag">HTML5</li>
+                    <li class="tag">CSS3</li>
+                  </ul>
+                </div>
 
-                <h4 class="project__subtitle">Lo que aprendí:</h4>
+                <h4 class="project__subtitle u-hidden">Lo que aprendí:</h4>
 
-                <ul class="project__learnings">
+                <ul class="u-hidden project__learnings">
                   <li>Estructuración semántica del contenido</li>
                   <li>Uso adecuado de encabezados y secciones</li>
                   <li>
@@ -334,12 +353,7 @@
                   </li>
                 </ul>
 
-                <ul class="project__technologies">
-                  <li class="tag">HTML5</li>
-                  <li class="tag">CSS3</li>
-                </ul>
-
-                <footer class="project__links">
+                <footer class="project__links u-hidden">
                   <a
                     class="project__link"
                     href="https://alexander404-hz.github.io/Landing-Page-Contabilidad/"
@@ -357,165 +371,8 @@
                 </footer>
               </article>
 
-              <!-- Proyecto 2 -->
-              <article class="project">
-                <header class="project__header">
-                  <h3 class="project__title">
-                    Formulario de registro con Validaciones HTML
-                  </h3>
-                </header>
-
-                <figure class="project__picture">
-                  <a
-                    href="https://alexander404-hz.github.io/Formulario-Validaciones/"
-                  >
-                    <img
-                      src="assets/img/formulario.jpg"
-                      alt="Formulario web con múltiples campos y validaciones"
-                      width="625"
-                      height="253"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </a>
-                  <figcaption>
-                    Formulario con distintos tipos de entrada y validaciones
-                  </figcaption>
-                </figure>
-
-                <p class="project__description">
-                  Formulario web orientado a la recopilación estructurada de
-                  datos, implementando validaciones nativas de HTML para
-                  garantizar la integridad de la información sin depender de
-                  JavaScript.
-                  <br /><br />
-                  A nivel de estilos, se trabajó en la consistencia visual de
-                  los campos, estados de interacción y organización del layout,
-                  priorizando claridad, accesibilidad y una experiencia de
-                  usuario fluida.
-                </p>
-
-                <h4 class="project__subtitle">Lo que aprendí:</h4>
-
-                <ul class="project__learnings">
-                  <li>
-                    Implementación de validaciones nativas como
-                    <code>required</code>, <code>pattern</code>,
-                    <code>min</code> y <code>max</code>, aprovechando el
-                    comportamiento del navegador.
-                  </li>
-                  <li>
-                    Uso de <code>fieldset</code> y <code>legend</code> para
-                    estructurar formularios de forma semántica y accesible.
-                  </li>
-                  <li>
-                    Estilización de formularios manteniendo consistencia entre
-                    inputs, selects y botones, incluyendo estados como
-                    <code>:focus</code> y
-                    <code>:valid</code>/<code>:invalid</code>.
-                  </li>
-                </ul>
-
-                <ul class="project__technologies">
-                  <li class="tag">HTML5</li>
-                  <li class="tag">CSS3</li>
-                </ul>
-
-                <footer class="project__links">
-                  <a
-                    class="project__link"
-                    href="https://alexander404-hz.github.io/Formulario-Validaciones/"
-                    >Ver proyecto</a
-                  >
-                  <a
-                    target="_blank"
-                    rel="me noopener noreferrer"
-                    title="Ver codigo en GitHub"
-                    aria-label="Codigo del proyecto"
-                    href="https://github.com/alexander404-hz/Formulario-Validaciones"
-                    class="project__link"
-                    >Ver código</a
-                  >
-                </footer>
-              </article>
-
-              <!-- Proyecto 3 -->
-              <article class="project">
-                <header class="project__header">
-                  <h3 class="project__title">
-                    Contenido Multimedia y Responsive
-                  </h3>
-                </header>
-
-                <figure class="project__picture">
-                  <a
-                    href="https://alexander404-hz.github.io/Informativo-Multimedia/"
-                  >
-                    <img
-                      src="assets/img/multimedia.jpg"
-                      alt="Ejemplo de imágenes responsivas y contenido multimedia"
-                      width="425"
-                      height="248"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </a>
-                  <figcaption>
-                    Uso de imágenes adaptativas y elementos multimedia
-                  </figcaption>
-                </figure>
-
-                <p class="project__description">
-                  Implementación de contenido multimedia optimizado para la web,
-                  incluyendo imágenes responsivas, uso del elemento
-                  <code>picture</code> para art direction y carga eficiente de
-                  recursos como video y audio. <br /><br />
-                  Desde el enfoque de CSS, se trabajó en la adaptación visual
-                  del contenido a distintos dispositivos, asegurando layouts
-                  flexibles y una correcta integración de elementos multimedia
-                  dentro del diseño.
-                </p>
-
-                <h4 class="project__subtitle">Lo que aprendí:</h4>
-
-                <ul class="project__learnings">
-                  <li>
-                    Uso de <code>srcset</code> y <code>sizes</code> para servir
-                    imágenes adaptadas según el dispositivo.
-                  </li>
-                  <li>
-                    Implementación del elemento <code>picture</code> para
-                    control de versiones de imagen (art direction).
-                  </li>
-                  <li>
-                    Aplicación de técnicas responsive con CSS para adaptar
-                    imágenes y contenedores multimedia sin romper el layout.
-                  </li>
-                </ul>
-
-                <ul class="project__technologies">
-                  <li class="tag">HTML5</li>
-                  <li class="tag">CSS3</li>
-                </ul>
-
-                <footer class="project__links">
-                  <a
-                    class="project__link"
-                    href="https://alexander404-hz.github.io/Informativo-Multimedia/"
-                  >
-                    Ver proyecto
-                  </a>
-                  <a
-                    target="_blank"
-                    rel="me noopener noreferrer"
-                    title="Ver codigo en GitHub"
-                    aria-label="Codigo del proyecto"
-                    href="https://github.com/alexander404-hz/Informativo-Multimedia"
-                    class="project__link"
-                    >Ver código</a
-                  >
-                </footer>
-              </article>
+              
+           
             </div>
           </div>
         </section>
@@ -782,6 +639,6 @@
       </button>
     </div>
 
-    <script src="assets/js/back-to-top.js"></script>
+    <script type="module" src="assets/js/app.js"></script>
   </body>
 </html>
