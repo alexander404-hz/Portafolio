@@ -1688,30 +1688,7 @@ ul {
 
 /* PROJECT CARD - EXTRA*/
 
-.project__extra {
-  display: grid;
-  grid-template-rows: 0fr;
 
-  opacity: 0;
-
-  transition:
-    grid-template-rows var(--duration-medium) var(--ease-standard),
-    opacity var(--duration-base) var(--ease-standard);
-}
-
-.project--expanded .project__extra {
-  grid-template-rows: 1fr;
-
-  opacity: 1;
-}
-
-.project__extra-inner {
-  display: flex;
-  flex-direction: column;
-
-  min-height: 0;
-  overflow: hidden;
-}
 
 .project__subtitle {
   grid-area: subtitle;

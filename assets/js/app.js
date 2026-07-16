@@ -155,8 +155,11 @@ window.addEventListener("resize", ajustarDistribucion);
 // EXPANDIR / CONTRAER PROJECT CARD (con animación FLIP + scroll estable)
 // ----------------------------------------------------------------------------
 
+// Duración/easing tomados de las variables CSS para que la animación de
+// reacomodo combine con el resto de transiciones del sitio.
 const raiz = getComputedStyle(document.documentElement);
-const duracionFlip = raiz.getPropertyValue("--duration-medium").trim() || "0.4s";
+const duracionFlip =
+  raiz.getPropertyValue("--duration-medium").trim() || "0.4s";
 const easeFlip = raiz.getPropertyValue("--ease-standard").trim() || "ease";
 
 if (contenedorProjects) {
@@ -169,13 +172,16 @@ if (contenedorProjects) {
 
     const extra = project.querySelector(".project__extra");
 
-    // 1) Guardamos la posición/tamaño ACTUAL de todas las cards 
+    // 1) Guardamos la posición/tamaño ACTUAL de todas las cards (antes del
+    //    cambio) y la posición del proyecto clicado respecto al viewport.
     const cards = document.querySelectorAll(".project");
     const rectsAntes = new Map();
     cards.forEach((card) => rectsAntes.set(card, card.getBoundingClientRect()));
     const topAntes = project.getBoundingClientRect().top;
 
-    // 2) Comportamiento de acordeón
+    // 2) Comportamiento de acordeón: si esta card se va a EXPANDIR,
+    //    contraemos cualquier otra que esté expandida, para que solo haya
+    //    una card abierta a la vez.
     const seEstaExpandiendo = !project.classList.contains("project--expanded");
 
     if (seEstaExpandiendo) {
@@ -194,7 +200,7 @@ if (contenedorProjects) {
 
         const otroExtra = otraCard.querySelector(".project__extra");
         if (otroExtra) {
-          otroExtra.toggleAttribute("inert", true);
+          otroExtra.classList.toggle("u-hidden", true);
         }
       });
     }
@@ -210,20 +216,26 @@ if (contenedorProjects) {
     boton.title = expandido ? "Ver menos detalles" : "Ver más detalles";
 
     if (extra) {
-      extra.toggleAttribute("inert", !expandido);
+      extra.classList.toggle("u-hidden", !expandido);
     }
 
     ajustarDistribucion();
     inicializarProyectos();
 
-    // 4) Compensamos el scroll
+    // 4) Compensamos el scroll para que el proyecto clicado no cambie de
+    //    posición en la pantalla (evita que la vista "salte" a otra
+    //    sección cuando el contenido de arriba o abajo cambia de tamaño).
     const topDespues = project.getBoundingClientRect().top;
     const deltaScroll = topDespues - topAntes;
     if (deltaScroll !== 0) {
       window.scrollBy(0, deltaScroll);
     }
 
-    // 5) Animamos (técnica FLIP) el reacomodo del resto de las cards
+    // 5) Animamos (técnica FLIP) el reacomodo del resto de las cards: cada
+    //    una "recuerda" su posición/tamaño anterior y transiciona hacia su
+    //    posición/tamaño real. Usamos la Web Animations API (en vez de
+    //    tocar element.style.transition) para que esto corra en paralelo
+    //    sin pisar la transición del "scale" del :hover.
     const duracionFlipMs = parseFloat(duracionFlip) * 1000 || 500;
 
     cards.forEach((card) => {
@@ -244,7 +256,12 @@ if (contenedorProjects) {
 
       card.style.transformOrigin = "top left";
 
-      // Mientras la card se mueve/redimensiona visualmente 
+      // Mientras la card se mueve/redimensiona visualmente (el transform
+      // animado), su área "bajo el cursor" cambia todo el tiempo, y eso
+      // hace que el :hover se active/desactive repetidas veces si el mouse
+      // queda quieto. La desconectamos del hover durante la animación y la
+      // reactivamos al terminar, para que el hover se evalúe una sola vez,
+      // ya en su posición final.
       card.style.pointerEvents = "none";
 
       const animacion = card.animate(
