@@ -25,24 +25,24 @@ if (btnBackToTop) {
 // Aplicar estilo scroll
 const contenedorProjects = document.querySelector(".projects__grid");
 
+const verificarOverflow = (techs) => {
+  if (techs.scrollWidth > techs.clientWidth) {
+    techs.classList.add("has-scroll");
+  } else {
+    techs.classList.remove("has-scroll");
+  }
+};
+
+const inicializarProyectos = () => {
+  document
+    .querySelectorAll(".project__technologies")
+    .forEach(verificarOverflow);
+};
+
+window.addEventListener("DOMContentLoaded", inicializarProyectos);
+window.addEventListener("resize", inicializarProyectos);
+
 if (contenedorProjects) {
-  const verificarOverflow = (techs) => {
-    if (techs.scrollWidth > techs.clientWidth) {
-      techs.classList.add("has-scroll");
-    } else {
-      techs.classList.remove("has-scroll");
-    }
-  };
-
-  const inicializarProyectos = () => {
-    document
-      .querySelectorAll(".project__technologies")
-      .forEach(verificarOverflow);
-  };
-
-  window.addEventListener("DOMContentLoaded", inicializarProyectos);
-  window.addEventListener("resize", inicializarProyectos);
-
   // Rueda del mouse (Wheel)
   contenedorProjects.addEventListener(
     "wheel",
@@ -155,8 +155,6 @@ window.addEventListener("resize", ajustarDistribucion);
 // EXPANDIR / CONTRAER PROJECT CARD (con animación FLIP + scroll estable)
 // ----------------------------------------------------------------------------
 
-// Duración/easing tomados de las variables CSS para que la animación de
-// reacomodo combine con el resto de transiciones del sitio.
 const raiz = getComputedStyle(document.documentElement);
 const duracionFlip = raiz.getPropertyValue("--duration-medium").trim() || "0.4s";
 const easeFlip = raiz.getPropertyValue("--ease-standard").trim() || "ease";
@@ -177,7 +175,7 @@ if (contenedorProjects) {
     cards.forEach((card) => rectsAntes.set(card, card.getBoundingClientRect()));
     const topAntes = project.getBoundingClientRect().top;
 
-    // 2) Comportamiento de acordeón: 
+    // 2) Comportamiento de acordeón
     const seEstaExpandiendo = !project.classList.contains("project--expanded");
 
     if (seEstaExpandiendo) {
@@ -201,7 +199,7 @@ if (contenedorProjects) {
       });
     }
 
-    // 3) Aplicamos el cambio real sobre la card clicada.
+    // 3) Aplicamos el cambio real sobre la card clicada
     const expandido = project.classList.toggle("project--expanded");
 
     boton.setAttribute("aria-expanded", String(expandido));
@@ -211,14 +209,14 @@ if (contenedorProjects) {
     );
     boton.title = expandido ? "Ver menos detalles" : "Ver más detalles";
 
-
     if (extra) {
       extra.toggleAttribute("inert", !expandido);
     }
 
     ajustarDistribucion();
+    inicializarProyectos();
 
-    // 4) Compensamos el scroll 
+    // 4) Compensamos el scroll
     const topDespues = project.getBoundingClientRect().top;
     const deltaScroll = topDespues - topAntes;
     if (deltaScroll !== 0) {
@@ -246,6 +244,7 @@ if (contenedorProjects) {
 
       card.style.transformOrigin = "top left";
 
+      // Mientras la card se mueve/redimensiona visualmente 
       card.style.pointerEvents = "none";
 
       const animacion = card.animate(
