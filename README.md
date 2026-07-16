@@ -71,9 +71,9 @@ No requiere instalación de dependencias ni build steps: es un sitio estático (
 
 | Proyecto | Descripción | Tecnologías |
 |---|---|---|
-| [Landing Page - Contabilidad Florez](https://alexander404-hz.github.io/Landing-Page-Contabilidad/) | Landing page de servicios contables enfocada en jerarquía visual y navegación intuitiva. | HTML5, CSS3 |
-| Formulario de registro con validaciones(https://alexander404-hz.github.io/Formulario-Validaciones/) | Formulario con validaciones nativas HTML5 (`required`, `pattern`, `min`/`max`) y buenas prácticas de accesibilidad. | HTML5, CSS3, JS |
-| Contenido Multimedia y Responsive(https://alexander404-hz.github.io/Informativo-Multimedia/) | Uso de `srcset`, `sizes` y `picture` para imágenes adaptativas y contenido multimedia optimizado. | HTML5, CSS3 |
+| [Landing Page - Contabilidad Florez](https://alexander404-hz.github.io/Landing-Page-Contabilidad/) | Landing page de servicios contables enfocada en jerarquía visual y navegación intuitiva. | HTML5, CSS3, JS |
+| [Formulario de registro con validaciones](https://alexander404-hz.github.io/Formulario-Validaciones/) | Formulario con validaciones nativas HTML5 (`required`, `pattern`, `min`/`max`) y buenas prácticas de accesibilidad. | HTML5, CSS3 |
+| [Contenido Multimedia y Responsive](https://alexander404-hz.github.io/Informativo-Multimedia/) | Uso de `srcset`, `sizes` y `picture` para imágenes adaptativas y contenido multimedia optimizado. | HTML5, CSS3 |
 
 ## 📫 Contacto
 
