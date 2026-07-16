@@ -4,9 +4,7 @@ Portafolio web personal de **Alexander Hernandez**, Ingeniero en Sistemas Inform
 
 🔗 **Sitio en vivo:** [alexander404-hz.github.io/Portafolio](https://alexander404-hz.github.io/Portafolio/)
 
-📸 Agrega aquí una captura de pantalla del sitio:
 ![Vista previa del portafolio](assets/img/readme.png)
-
 
 ## ✨ Características
 
