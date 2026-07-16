@@ -109,26 +109,162 @@ function ajustarDistribucion() {
     );
   });
 
-  if (projects.length === 0) return;  
+  if (projects.length === 0) return;
 
-  if (window.matchMedia("(min-width: 768px)").matches) {
-    if (window.matchMedia("(max-width: 1024px)").matches) {
-      if (projects.length % 2 === 1) {
-        projects[projects.length - 1].classList.add("project--one-horizontal");
+  const esTabletOMas = window.matchMedia("(min-width: 768px)").matches;
+  if (!esTabletOMas) return;
+
+  const esSoloTablet = window.matchMedia("(max-width: 1024px)").matches;
+
+  const aplicarSobrante = (grupo) => {
+    if (grupo.length === 0) return;
+
+    if (esSoloTablet) {
+      if (grupo.length % 2 === 1) {
+        grupo[grupo.length - 1].classList.add("project--one-horizontal");
       }
     } else {
-        console.log("xd: ",projects.length%3);
-
-      if (projects.length % 3 === 1) {
-        projects[projects.length - 1].classList.add("project--horizontal");
-      } else if (projects.length % 3 === 2) {
-        projects[projects.length - 2].classList.add("project--two-horizontal");
-        projects[projects.length - 1].classList.add("project--two-horizontal");
+      if (grupo.length % 3 === 1) {
+        grupo[grupo.length - 1].classList.add("project--horizontal");
+      } else if (grupo.length % 3 === 2) {
+        grupo[grupo.length - 2].classList.add("project--two-horizontal");
+        grupo[grupo.length - 1].classList.add("project--two-horizontal");
       }
     }
-  }
+  };
+
+  let grupoActual = [];
+
+  projects.forEach((project) => {
+    if (project.classList.contains("project--expanded")) {
+      aplicarSobrante(grupoActual);
+      grupoActual = [];
+    } else {
+      grupoActual.push(project);
+    }
+  });
+
+  aplicarSobrante(grupoActual);
 }
 
 ajustarDistribucion();
 
 window.addEventListener("resize", ajustarDistribucion);
+
+// ----------------------------------------------------------------------------
+// EXPANDIR / CONTRAER PROJECT CARD (con animación FLIP + scroll estable)
+// ----------------------------------------------------------------------------
+
+// Duración/easing tomados de las variables CSS para que la animación de
+// reacomodo combine con el resto de transiciones del sitio.
+const raiz = getComputedStyle(document.documentElement);
+const duracionFlip = raiz.getPropertyValue("--duration-medium").trim() || "0.4s";
+const easeFlip = raiz.getPropertyValue("--ease-standard").trim() || "ease";
+
+if (contenedorProjects) {
+  contenedorProjects.addEventListener("click", (evento) => {
+    const boton = evento.target.closest(".project__toggle");
+    if (!boton) return;
+
+    const project = boton.closest(".project");
+    if (!project) return;
+
+    const extra = project.querySelector(".project__extra");
+
+    // 1) Guardamos la posición/tamaño ACTUAL de todas las cards 
+    const cards = document.querySelectorAll(".project");
+    const rectsAntes = new Map();
+    cards.forEach((card) => rectsAntes.set(card, card.getBoundingClientRect()));
+    const topAntes = project.getBoundingClientRect().top;
+
+    // 2) Comportamiento de acordeón: 
+    const seEstaExpandiendo = !project.classList.contains("project--expanded");
+
+    if (seEstaExpandiendo) {
+      cards.forEach((otraCard) => {
+        if (otraCard === project) return;
+        if (!otraCard.classList.contains("project--expanded")) return;
+
+        otraCard.classList.remove("project--expanded");
+
+        const otroBoton = otraCard.querySelector(".project__toggle");
+        if (otroBoton) {
+          otroBoton.setAttribute("aria-expanded", "false");
+          otroBoton.setAttribute("aria-label", "Expandir proyecto");
+          otroBoton.title = "Ver más detalles";
+        }
+
+        const otroExtra = otraCard.querySelector(".project__extra");
+        if (otroExtra) {
+          otroExtra.toggleAttribute("inert", true);
+        }
+      });
+    }
+
+    // 3) Aplicamos el cambio real sobre la card clicada.
+    const expandido = project.classList.toggle("project--expanded");
+
+    boton.setAttribute("aria-expanded", String(expandido));
+    boton.setAttribute(
+      "aria-label",
+      expandido ? "Contraer proyecto" : "Expandir proyecto",
+    );
+    boton.title = expandido ? "Ver menos detalles" : "Ver más detalles";
+
+
+    if (extra) {
+      extra.toggleAttribute("inert", !expandido);
+    }
+
+    ajustarDistribucion();
+
+    // 4) Compensamos el scroll 
+    const topDespues = project.getBoundingClientRect().top;
+    const deltaScroll = topDespues - topAntes;
+    if (deltaScroll !== 0) {
+      window.scrollBy(0, deltaScroll);
+    }
+
+    // 5) Animamos (técnica FLIP) el reacomodo del resto de las cards
+    const duracionFlipMs = parseFloat(duracionFlip) * 1000 || 500;
+
+    cards.forEach((card) => {
+      const antes = rectsAntes.get(card);
+      const despues = card.getBoundingClientRect();
+
+      const dx = antes.left - despues.left;
+      const dy = antes.top - despues.top;
+      const sx = antes.width / despues.width;
+      const sy = antes.height / despues.height;
+
+      const sinCambios =
+        Math.abs(dx) < 1 &&
+        Math.abs(dy) < 1 &&
+        Math.abs(sx - 1) < 0.01 &&
+        Math.abs(sy - 1) < 0.01;
+      if (sinCambios) return;
+
+      card.style.transformOrigin = "top left";
+
+      card.style.pointerEvents = "none";
+
+      const animacion = card.animate(
+        [
+          {
+            transform: `translate(${dx}px, ${dy}px) scale(${sx}, ${sy})`,
+          },
+          { transform: "translate(0, 0) scale(1, 1)" },
+        ],
+        {
+          duration: duracionFlipMs,
+          easing: easeFlip,
+        },
+      );
+
+      animacion.onfinish = () => {
+        card.style.transformOrigin = "";
+        card.style.pointerEvents = "";
+      };
+    });
+  });
+}
