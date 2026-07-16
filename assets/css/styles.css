@@ -1447,8 +1447,8 @@ ul {
   align-items: center;
   justify-content: center;
 
-  width: 2.25rem;
-  height: 2.25rem;
+  width: 44px;
+  height: 44px;
   padding: 0;
 
   background: var(--color-secondary);
@@ -1464,7 +1464,7 @@ ul {
 
 .project__toggle:hover {
   background: var(--color-tertiary);
-  scale: 1.1;
+  scale: 1.05;
 }
 
 .project__toggle-icon {
@@ -1552,6 +1552,7 @@ ul {
 .project--two-horizontal .project__header {
   margin: calc(var(--space-lg) * -1);
   margin-right: 0;
+  margin-bottom: 0;
 }
 
 .project--expanded .project__header {
@@ -1585,7 +1586,8 @@ ul {
 .project__title {
   margin: 0;
 
-  font-size: var(--font-lg);
+  font-size: var(--font-xl);
+  font-weight: 700;
   color: var(--project-hover);
 
   transition: color var(--duration-base) var(--ease-standard) var(--delay-sm);
@@ -1651,7 +1653,7 @@ ul {
   left: var(--space-lg);
   bottom: var(--space-lg);
 
-  max-width: 45%;
+  max-width: 46.8%;
 }
 
 .tag {
