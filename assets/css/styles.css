@@ -2001,8 +2001,6 @@ ul {
    ============================================================================= */
 
 .contact {
-  grid-area: contact;
-
   padding: var(--space-xl) 0;
   background: var(--gd-contact);
 
@@ -2024,7 +2022,6 @@ ul {
 .contact__container {
   display: flex;
   flex-direction: column;
-
   gap: 1.2rem;
 
   padding: 0 var(--space-md);
@@ -2153,16 +2150,16 @@ ul {
 }
 
 .form__item {
-  flex: 1 1 auto;
-
   display: flex;
   flex-direction: column;
+  min-width: 200px;
+  max-width: 400px;
 }
 
 .form__area {
   height: 100%;
-  max-width: 230px;
-  max-height: 200px;
+  max-width: 400px;
+  max-height: 300px;
 }
 
 .form__label {
@@ -2180,10 +2177,8 @@ ul {
 }
 
 .form__actions {
-  flex: 1 1 auto;
   align-self: center;
-
-  padding: 0 clamp(0rem, 10rem - 23vw, 2.5rem);
+  padding: var(--space-md) var(--space-3xl) 0;
 }
 
 @media (min-width: 768px) {
