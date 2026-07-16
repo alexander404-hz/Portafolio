@@ -114,7 +114,7 @@ function ajustarDistribucion() {
   const esTabletOMas = window.matchMedia("(min-width: 768px)").matches;
   if (!esTabletOMas) return;
 
-  const esSoloTablet = window.matchMedia("(max-width: 1024px)").matches;
+  const esSoloTablet = window.matchMedia("(max-width: 1023.9px)").matches;
 
   const aplicarSobrante = (grupo) => {
     if (grupo.length === 0) return;
