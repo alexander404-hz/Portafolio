@@ -1591,6 +1591,43 @@ ul {
   object-fit: cover;
 }
 
+.project__picture-link {
+  position: relative;
+  display: flex;
+  flex: 1;
+}
+
+.project__picture-link:focus-visible {
+  outline: 2px solid var(--color-tertiary);
+  outline-offset: -2px;
+}
+
+.project__picture-overlay {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(
+    to top,
+    color-mix(in srgb, var(--color-dark), transparent 25%),
+    color-mix(in srgb, var(--color-dark), transparent 55%) 60%
+  );
+  color: var(--color-light);
+  font-weight: 600;
+  font-size: var(--font-sm);
+
+  opacity: 0;
+  transition: opacity var(--duration-fast) ease-out;
+}
+
+.project__picture-link:hover .project__picture-overlay,
+.project__picture-link:focus-visible .project__picture-overlay {
+  opacity: 1;
+}
+
 /* PROJECT CARD - BODY*/
 
 .project__body {
