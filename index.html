@@ -294,6 +294,7 @@
 
             <div class="projects__grid">
               <!-- Proyecto 1 -->
+
               <article class="project project--featured">
                 <button
                   type="button"
@@ -346,11 +347,10 @@
                   </h3>
 
                   <p class="project__resume">
-                    Proyecto real de principio a fin para un despacho
-                    contable: landing page responsive con marca propia,
-                    dominio, DNS y correo corporativo configurados desde
-                    cero, dejando el sitio en producción, con HTTPS e
-                    indexado en Google.
+                    Proyecto real de principio a fin para un despacho contable:
+                    landing page responsive con marca propia, dominio, DNS y
+                    correo corporativo configurados desde cero, dejando el sitio
+                    en producción, con HTTPS e indexado en Google.
                   </p>
 
                   <ul class="project__technologies">
@@ -363,51 +363,48 @@
 
                 <div class="project__extra u-hidden">
                   <p class="project__description">
-                    Más que una landing page: un proyecto completo de
-                    presencia digital para un cliente real. Además del
-                    frontend (HTML5 y CSS3, responsive y con
-                    validaciones), se gestionó la compra del dominio
-                    propio, la zona DNS en Cloudflare (registros A y
+                    Más que una landing page: un proyecto completo de presencia
+                    digital para un cliente real. Además del frontend (HTML5 y
+                    CSS3, responsive y con validaciones), se gestionó la compra
+                    del dominio propio, la zona DNS en Cloudflare (registros A y
                     CNAME), el despliegue en GitHub Pages con dominio
                     personalizado y HTTPS, el correo corporativo mediante
-                    Cloudflare Email Routing con SPF y DMARC, y el SEO
-                    técnico (metaetiquetas, Open Graph, datos
-                    estructurados Schema.org e indexación en Google
-                    Search Console).
+                    Cloudflare Email Routing con SPF y DMARC, y el SEO técnico
+                    (metaetiquetas, Open Graph, datos estructurados Schema.org e
+                    indexación en Google Search Console).
                   </p>
 
                   <h4 class="project__subtitle">Lo que aprendí:</h4>
 
                   <ul class="project__learnings">
                     <li>
-                      A llevar un sitio de principio a fin como lo haría
-                      una agencia: branding, desarrollo, infraestructura y
-                      servicios empresariales, no solo el código.
+                      A llevar un sitio de principio a fin como lo haría una
+                      agencia: branding, desarrollo, infraestructura y servicios
+                      empresariales, no solo el código.
                     </li>
                     <li>
-                      A entender y configurar la relación entre dominio,
-                      DNS y hosting: compra del dominio, delegación a
-                      Cloudflare y publicación con dominio propio en
-                      GitHub Pages.
+                      A entender y configurar la relación entre dominio, DNS y
+                      hosting: compra del dominio, delegación a Cloudflare y
+                      publicación con dominio propio en GitHub Pages.
                     </li>
                     <li>
                       A administrar registros DNS (A, CNAME, MX, TXT) y a
                       habilitar HTTPS mediante el proxy/CDN de Cloudflare.
                     </li>
                     <li>
-                      A montar correo corporativo sin servidor propio
-                      usando Cloudflare Email Routing, y a configurar SPF
-                      y DMARC para reducir el riesgo de suplantación.
+                      A montar correo corporativo sin servidor propio usando
+                      Cloudflare Email Routing, y a configurar SPF y DMARC para
+                      reducir el riesgo de suplantación.
                     </li>
                     <li>
-                      A aplicar SEO técnico real (metaetiquetas, Open
-                      Graph, datos estructurados Schema.org) y a indexar
-                      el sitio en Google Search Console.
+                      A aplicar SEO técnico real (metaetiquetas, Open Graph,
+                      datos estructurados Schema.org) y a indexar el sitio en
+                      Google Search Console.
                     </li>
                     <li>
-                      A integrar servicios de terceros como Formspree y
-                      WhatsApp para resolver funcionalidad de backend sin
-                      salir de un sitio estático.
+                      A integrar servicios de terceros como Formspree y WhatsApp
+                      para resolver funcionalidad de backend sin salir de un
+                      sitio estático.
                     </li>
                   </ul>
 
@@ -433,6 +430,142 @@
                   </footer>
                 </div>
               </article>
+
+              <!-- Proyecto 2 -->
+
+              <article class="project">
+                <button
+                  type="button"
+                  class="project__toggle"
+                  aria-expanded="false"
+                  aria-label="Expandir proyecto"
+                  title="Ver más detalles"
+                >
+                  <svg
+                    class="project__toggle-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M6 9l6 6 6-6" />
+                  </svg>
+                </button>
+                <header class="project__header">
+                  <figure class="project__picture">
+                    <a
+                      class="project__picture-link"
+                      target="_blank"
+                      rel="me noopener noreferrer"
+                      aria-label="Demostracion del proyecto"
+                      href="https://alexander404-hz.github.io/Sistema-Notas-Markdown/"
+                    >
+                      <img
+                        src="assets/img/notas-markdown.jpg"
+                        alt="Aplicación de notas en Markdown con editor y vista previa en tiempo real"
+                        width="425"
+                        height="250"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <span class="project__picture-overlay"
+                        >Ver proyecto ↗</span
+                      >
+                    </a>
+                    <figcaption>
+                      Editor de Markdown con vista previa en tiempo real
+                    </figcaption>
+                  </figure>
+                </header>
+
+                <div class="project__body">
+                  <h3 class="project__title">Sistema de notas Markdown</h3>
+
+                  <p class="project__resume">
+                    Aplicación de notas en Markdown con operaciones CRUD
+                    completas, vista previa en tiempo real y búsqueda, todo
+                    persistido en localStorage sin backend. El editor y el
+                    renderizado se muestran lado a lado gracias a marked.js.
+                  </p>
+
+                  <ul class="project__technologies">
+                    <li class="tag">HTML5</li>
+                    <li class="tag">CSS3</li>
+                    <li class="tag">JS</li>
+                    <li class="tag">localStorage</li>
+                    <li class="tag">marked.js</li>
+                  </ul>
+                </div>
+
+                <div class="project__extra u-hidden">
+                  <p class="project__description">
+                    Sistema de notas que permite crear, ver, editar y eliminar
+                    entradas escritas en Markdown, con persistencia en el
+                    <code>localStorage</code> del navegador para que las notas
+                    se mantengan entre sesiones sin necesidad de servidor. La
+                    interfaz usa un layout dividido: a un lado se escribe el
+                    Markdown y al otro se renderiza en HTML en tiempo real
+                    mediante <code>marked.js</code>. Incluye además un buscador
+                    para filtrar notas por su contenido.
+                  </p>
+
+                  <h4 class="project__subtitle">Lo que aprendí:</h4>
+
+                  <ul class="project__learnings">
+                    <li>
+                      A implementar un CRUD completo en JavaScript vanilla,
+                      manejando el estado de la lista de notas en memoria y
+                      sincronizándolo con
+                      <code>localStorage</code> en cada cambio.
+                    </li>
+                    <li>
+                      A serializar y recuperar datos estructurados con
+                      <code>JSON.stringify</code> y <code>JSON.parse</code> para
+                      persistir información compleja en el navegador.
+                    </li>
+                    <li>
+                      A integrar una librería externa (<code>marked.js</code>)
+                      para convertir Markdown a HTML de forma confiable, en
+                      lugar de escribir un parser propio.
+                    </li>
+                    <li>
+                      A construir una interfaz de edición dividida (editor +
+                      vista previa), actualizando el renderizado en tiempo real
+                      conforme el usuario escribe.
+                    </li>
+                    <li>
+                      A implementar búsqueda/filtrado en el cliente sobre datos
+                      ya cargados, sin depender de un servidor.
+                    </li>
+                  </ul>
+
+                  <footer class="project__links">
+                    <a
+                      target="_blank"
+                      rel="me noopener noreferrer"
+                      title="Ver proyecto"
+                      aria-label="Demostracion del proyecto"
+                      class="project__link"
+                      href="https://alexander404-hz.github.io/Sistema-Notas-Markdown/"
+                      >Ver proyecto</a
+                    >
+                    <a
+                      target="_blank"
+                      rel="me noopener noreferrer"
+                      title="Ver codigo en GitHub"
+                      aria-label="Codigo del proyecto"
+                      class="project__link"
+                      href="https://github.com/alexander404-hz/Sistema-Notas-Markdown"
+                      >Ver código</a
+                    >
+                  </footer>
+                </div>
+              </article>
+
+              <!-- Proyecto 3 -->
+
               <article class="project">
                 <button
                   type="button"
@@ -486,11 +619,11 @@
                   </h3>
 
                   <p class="project__resume">
-                    Formulario de registro que reúne prácticamente todos
-                    los tipos de input de HTML5, usado como ejercicio para
-                    dominar las validaciones nativas del navegador y
-                    construir formularios accesibles sin depender de
-                    JavaScript ni librerías externas.
+                    Formulario de registro que reúne prácticamente todos los
+                    tipos de input de HTML5, usado como ejercicio para dominar
+                    las validaciones nativas del navegador y construir
+                    formularios accesibles sin depender de JavaScript ni
+                    librerías externas.
                   </p>
 
                   <ul class="project__technologies">
@@ -501,17 +634,16 @@
 
                 <div class="project__extra u-hidden">
                   <p class="project__description">
-                    Ejercicio enfocado en explotar al máximo las
-                    capacidades nativas de HTML5 para formularios: más de
-                    20 campos distintos (texto, email, rango, color,
-                    fecha, semana, mes, archivos, entre otros) con
-                    validaciones mediante <code>required</code>,
-                    <code>pattern</code>, <code>minlength</code> y
-                    <code>datalist</code> para sugerencias. Se prestó
-                    especial atención a la accesibilidad, usando
-                    <code>fieldset</code>, <code>legend</code> y
-                    etiquetas asociadas a cada campo, además de un diseño
-                    con etiquetas flotantes.
+                    Ejercicio enfocado en explotar al máximo las capacidades
+                    nativas de HTML5 para formularios: más de 20 campos
+                    distintos (texto, email, rango, color, fecha, semana, mes,
+                    archivos, entre otros) con validaciones mediante
+                    <code>required</code>, <code>pattern</code>,
+                    <code>minlength</code> y <code>datalist</code> para
+                    sugerencias. Se prestó especial atención a la accesibilidad,
+                    usando <code>fieldset</code>, <code>legend</code> y
+                    etiquetas asociadas a cada campo, además de un diseño con
+                    etiquetas flotantes.
                   </p>
 
                   <h4 class="project__subtitle">Lo que aprendí:</h4>
@@ -562,6 +694,9 @@
                   </footer>
                 </div>
               </article>
+
+              <!-- Proyecto 4 -->
+
               <article class="project">
                 <button
                   type="button"
@@ -615,11 +750,11 @@
                   </h3>
 
                   <p class="project__resume">
-                    Página informativa sobre contenido multimedia
-                    responsive: imágenes adaptativas, video y audio en
-                    HTML5. Documenta con ejemplos funcionales las técnicas
-                    para optimizar el peso y la calidad visual del
-                    contenido según el dispositivo del usuario.
+                    Página informativa sobre contenido multimedia responsive:
+                    imágenes adaptativas, video y audio en HTML5. Documenta con
+                    ejemplos funcionales las técnicas para optimizar el peso y
+                    la calidad visual del contenido según el dispositivo del
+                    usuario.
                   </p>
 
                   <ul class="project__technologies">
@@ -630,14 +765,13 @@
 
                 <div class="project__extra u-hidden">
                   <p class="project__description">
-                    Proyecto pensado como referencia técnica sobre
-                    multimedia responsive. Además de los ejemplos
-                    funcionales (<code>srcset</code>, <code>picture</code>,
-                    video y audio con múltiples formatos, video embebido
-                    de YouTube), incluye tablas comparativas con formatos,
-                    pesos y resoluciones recomendadas para imágenes, video
-                    y audio, a modo de guía de buenas prácticas aplicables
-                    a futuros proyectos.
+                    Proyecto pensado como referencia técnica sobre multimedia
+                    responsive. Además de los ejemplos funcionales
+                    (<code>srcset</code>, <code>picture</code>, video y audio
+                    con múltiples formatos, video embebido de YouTube), incluye
+                    tablas comparativas con formatos, pesos y resoluciones
+                    recomendadas para imágenes, video y audio, a modo de guía de
+                    buenas prácticas aplicables a futuros proyectos.
                   </p>
 
                   <h4 class="project__subtitle">Lo que aprendí:</h4>
@@ -652,14 +786,14 @@
                       control de versiones de imagen (art direction).
                     </li>
                     <li>
-                      A elegir el formato de audio/video adecuado según el
-                      caso de uso y a diferir su carga con
+                      A elegir el formato de audio/video adecuado según el caso
+                      de uso y a diferir su carga con
                       <code>preload</code> para no afectar el rendimiento.
                     </li>
                     <li>
                       A investigar y documentar pesos y resoluciones
-                      recomendadas por tipo de contenido, como criterio
-                      objetivo para futuras optimizaciones.
+                      recomendadas por tipo de contenido, como criterio objetivo
+                      para futuras optimizaciones.
                     </li>
                   </ul>
 
