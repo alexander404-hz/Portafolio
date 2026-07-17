@@ -5,21 +5,21 @@
 :root {
   /* RADIOS (Border Radius) */
 
-  --radius-xs: 0.25rem; /* 4px */
-  --radius-sm: 0.375rem; /* 6px */
-  --radius-md: 0.5rem; /* 8px */
-  --radius-lg: 0.875rem; /* 14px */
-  --radius-xl: 1.375rem; /* 22px */
+  --radius-xs: 0.25rem; /* 4px  - Chips, tags, elementos muy pequeños */
+  --radius-sm: 0.375rem; /* 6px  - Inputs, botones pequeños */
+  --radius-md: 0.5rem; /* 8px  - Iconos, badges, bordes estándar */
+  --radius-lg: 0.875rem; /* 14px - Tarjetas y componentes principales */
+  --radius-xl: 1.375rem; /* 22px - Secciones grandes (hero, contenedores destacados) */
 
   /* ESPACIOS (Margins & Paddings) */
 
   --space-xs: 0.25rem; /* 4px  - Espaciados mínimos internos */
   --space-sm: 0.5rem; /* 8px  - Espacio entre iconos/textos, inputs */
   --space-md: 1rem; /* 16px - Padding estándar de tarjetas y componentes */
-  --space-lg: 1.5rem; /* 16px - Padding estándar de tarjetas y componentes */
+  --space-lg: 1.5rem; /* 24px - Padding amplio de tarjetas y secciones */
   --space-xl: 2rem; /* 32px - Espacio entre secciones medianas o bloques */
   --space-2xl: 3rem; /* 48px - Separación de secciones grandes en el layout */
-  --space-3xl: 4rem; /* 48px - Separación de secciones grandes en el layout */
+  --space-3xl: 4rem; /* 64px - Separación máxima entre grandes bloques del layout */
 
   /* TAMAÑOS DE FUENTE (Font Sizes) */
 
@@ -30,7 +30,6 @@
   --font-xl: 1.125rem; /* 18px - Títulos de tarjetas o secciones (H2) */
   --font-2xl: 1.25rem; /* 20px - Títulos principales de páginas (H1) */
   --font-3xl: 1.375rem; /* 22px - Títulos gigantes (Hero sections) */
-
   /* TIPOGRAFIA */
 
   --font-base: Arial, sans-serif;
@@ -41,7 +40,7 @@
   --color-primary: #a13df9;
   --color-secondary: #5f379b;
   --color-tertiary: #6366f1;
-  
+
   --color-primary-shadow: color-mix(in srgb, var(--color-primary), #ffffff 70%);
   --color-primary-light: color-mix(in srgb, var(--color-primary), #ffffff 40%);
   --color-primary-hover: color-mix(in srgb, var(--color-primary), #ffffff 20%);
