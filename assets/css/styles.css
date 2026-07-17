@@ -41,7 +41,7 @@
   --color-primary: #a13df9;
   --color-secondary: #5f379b;
   --color-tertiary: #6366f1;
-
+  
   --color-primary-shadow: color-mix(in srgb, var(--color-primary), #ffffff 70%);
   --color-primary-light: color-mix(in srgb, var(--color-primary), #ffffff 40%);
   --color-primary-hover: color-mix(in srgb, var(--color-primary), #ffffff 20%);
